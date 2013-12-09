@@ -1,79 +1,110 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>東西南北</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+<link rel="shortcut icon" href="http://bennychia.github.io/images/favicon.ico"/>
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://bennychia.github.io/images/hlss57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://bennychia.github.io/images/hlss72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://bennychia.github.io/images/hlss114.png" />
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Traditional-decision-maker : " />
+<link rel="apple-touch-startup-image" href="http://bennychia.github.io/images/hlss_startup.png" />
+<link rel="apple-touch-startup-image" sizes="640x920" href="http://bennychia.github.io/images/hlss_startup_retina.png" />
+<link rel="apple-touch-startup-image" sizes="320x460" href="http://bennychia.github.io/images/hlss_startup.png" media="screen and (max-device-width: 320)" />
+<link rel="stylesheet" href="http://bennychia.github.io/assets/css/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="css/hlss.css" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<script type="text/javascript" src="http://bennychia.github.io/assets/script/jquery.js"></script>
+<script type="text/javascript" src="http://bennychia.github.io/assets/script/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="script/hlss.js"></script>
+</head>
 
-    <title>Traditional-decision-maker</title>
-  </head>
+<body>
+<div id="shade"></div>
+<div id="result" style="display:none">
+<div class="alert">
+<a href="###" target="_blank" class="bowl visit">
+<span class="stick">
+<i><i></i></i>
+</span>
+<span class="ricew">
+<span class="rice"><i><i><i><i><i><i></i></i></i></i></i></i></span>
+</span>
+<span class="leftb"></span>
+<span class="rightb"></span>
+<span class="orn"></span>
+</a>
+<a href="###" target="_blank" class="alin visit">
+<span class="h1 kai"><span></span></span>
+</a>
+</div>
+</div>
+<div class="w">
+<div class="m f3">
+<div class="d d1"><div class="r"><div class="shade direction" id="d1"></div><div class="t">東</div></div></div>
+<div class="d d2"><div class="r"><div class="shade direction" id="d2"></div><div class="t">西</div></div></div>
+<div class="d d3"><div class="r"><div class="shade direction" id="d3"></div><div class="t">南</div></div></div>
+<div class="d d4"><div class="r"><div class="shade direction" id="d4"></div><div class="t">北</div></div></div>
+<div class="lw">
+<div class="l"><div class="l"></div></div>
+</div>
+<div class="tw">
+<div class="c1">
+<div class="ci1 c d2d"><div class="tr f1f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci2 c d3d"><div class="tr f2f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci3 c d4d"><div class="tr f1f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci4 c d1d"><div class="tr f2f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+</div>
+<div class="c2">
+<div class="ci1 c d1d"><div class="tr f1f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci2 c d2d"><div class="tr f2f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci3 c d3d"><div class="tr f1f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+<div class="ci4 c d4d"><div class="tr f2f"><div class="ti"><div class="shade"></div><div class="t"></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="sh">
+<div class="shi"></div>
+</div>
+</div>
+<div class="wshade_w">
+<div class="wshade" id="intro">
+<div>
+<div class="btw"><span id="bt_intro" class="bt intro"><span class="s t" title="Help you make a decision">Start</span></span></div>
+</div>
+</div>
+<div class="wshade cross" id="panel" style="display:none">
+<div class="btw">
+<span id="bt_num" class="bt count"><span class="s" id="cur"></span></span>
+<span id="bt_count" class="bt start" style="display:none" title="Run"><span class="s t">Run</span></span>
+<span id="bt_return" class="bt return" style="display:none" title="Return"><span class="s t">Return</span></span>
+<span id="bt_toggleall" class="bt showall" style="display:none" title="Hide"><span class="s t">Hide</span></span>
+<span id="bt_randomitem" class="bt random" style="display:none" title="Disturb"><span class="s t">Shuffle</span></span>
+</div>
+</div>
+</div>
+<div class="d_comment">
 
-  <body>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'bennychia';
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/bennychia/traditional-decision-maker">View on GitHub</a>
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
-          <h1 id="project_title">Traditional-decision-maker</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/bennychia/traditional-decision-maker/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/bennychia/traditional-decision-maker/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Traditional-decision-maker maintained by <a href="https://github.com/bennychia">bennychia</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</div>
+<div class="control" id="active">
+<div class="copyright"><div class="inner">"東西南北", webkit on iOS/desktop support.<br />Copyright &copy; 2013-2014 by <a href="http://www.bennychia.com">Benny Chia</a>, All Rights Reserved.</div></div>
+</div>
+</body>
 </html>
